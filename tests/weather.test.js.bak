@@ -1,0 +1,8 @@
+const Weather = require("../src/weather.js");
+
+test("Check London Name", () => {
+  data = Weather().getWeather("London");
+  data.then(function(e) {
+    expect(data["main"]["name"]).toBe("London");
+  })
+})
